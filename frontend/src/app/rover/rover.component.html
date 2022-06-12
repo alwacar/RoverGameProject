@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12-xs">
+        <canvas #canvas width="500" height="500"></canvas>
+      </div>
+    </div>
+    <div class="row" style="font-size:16px;">
+        <div class="col-1-xs mr-1" [ngClass]="order0">
+            <button title="{{forward}}" class="btn btn-primary rounded-circle" (click)="Command('F')">
+                <i *ngIf="forward==='up'" class="fa fa-angle-up fa-xs"></i>
+                <i *ngIf="forward==='down'" class="fa fa-angle-down fa-xs"></i>
+                <i *ngIf="forward==='left'" class="fa fa-angle-left fa-xs"></i>
+                <i *ngIf="forward==='right'" class="fa fa-angle-right fa-xs"></i>
+            </button>
+        </div>
+        <div class="col-1-xs mr-1" [ngClass]="order1">
+            <button title="{{backward}}" class="btn btn-secondary rounded-circle" (click)="Command('B')">
+                <i *ngIf="backward==='up'" class="fa fa-angle-up fa-xs"></i>
+                <i *ngIf="backward==='down'" class="fa fa-angle-down fa-xs"></i>
+                <i *ngIf="backward==='left'" class="fa fa-angle-left fa-xs"></i>
+                <i *ngIf="backward==='right'" class="fa fa-angle-right fa-xs"></i>
+            </button>
+        </div>
+        <div class="col-1-xs mr-1" [ngClass]="order2">
+            <button title="{{left}}" class="btn btn-secondary rounded-circle" (click)="Command('L')">
+                <i *ngIf="left==='left'" class="fa fa-angle-left fa-xs"></i>
+                <i *ngIf="left==='right'" class="fa fa-angle-right fa-xs"></i>
+                <i *ngIf="left==='up'" class="fa fa-angle-up fa-xs"></i>
+                <i *ngIf="left==='down'" class="fa fa-angle-down fa-xs"></i>
+            </button>
+        </div>
+        <div class="col-1-xs mr-1" [ngClass]="order3">
+            <button title="{{right}}" class="btn btn-secondary rounded-circle" (click)="Command('R')">
+                <i *ngIf="right==='right'" class="fa fa-angle-right fa-xs"></i>
+                <i *ngIf="right==='left'" class="fa fa-angle-left fa-xs"></i>
+                <i *ngIf="right==='down'" class="fa fa-angle-down fa-xs"></i>
+                <i *ngIf="right==='up'" class="fa fa-angle-up fa-xs"></i>
+            </button>
+        </div>
+        <!-- <div class="col-1-xs mr-1">
+            <button title="undo" class="btn btn-danger" (click)="Command('C')" [disabled]=disabledCommand><i class="fa fa-undo fa-xs"></i></button>
+        </div> -->
+        <div class="col-1-xs mr-1 order-5">
+            <button title="send" class="btn btn-success rounded-circle" (click)="Send()" [disabled]="disabledCommand">
+                <i class="fa fa-send fa-xs"></i>
+            </button>
+        </div>
+    </div>
+  </div >
